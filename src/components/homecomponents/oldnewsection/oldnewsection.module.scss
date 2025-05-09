@@ -1,0 +1,110 @@
+@use "@/styles/mixin" as *;
+
+.oldnewsectionmain {
+  padding: 100px 0;
+  position: relative;
+  background-color: var(--lightblue);
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 179px;
+    content: "";
+    background-image: url("../../../assets/image/bgnetsckew.png");
+    z-index: 1;
+  }
+
+  .oldnewsection {
+    position: relative;
+    z-index: 2;
+
+    .oldnewsectiontitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 50px;
+
+      h3 {
+        max-width: 1049px;
+        @include font48;
+        color: var(--black2);
+        margin-bottom: 18px;
+
+        span {
+          color: var(--border3);
+        }
+      }
+
+      p {
+        max-width: 913px;
+        @include font18;
+        color: var(--black2muted);
+      }
+    }
+
+    .oldnewsectioncontentmain {
+      background-color: var(--white);
+      border: 1px solid var(--border1);
+      border-radius: 30px;
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      position: relative;
+
+      .oldnewsectioncontent {
+        width: 100%;
+        max-width: 620px;
+        h4 {
+          @include font24;
+          color: var(--black2);
+        }
+
+        .oldnewsectioncontentflx {
+          margin-top: 30px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          .oldnewflx {
+            .oldnewflxtitle {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              margin-bottom: 12px;
+
+              svg {
+                width: 30px;
+                height: 30px;
+              }
+
+              h5 {
+                @include font20;
+                color: var(--black2);
+              }
+            }
+
+            p {
+              @include font18;
+              color: var(--black2muted);
+            }
+          }
+        }
+      }
+
+      .vsimage {
+        position: absolute;
+        top: 0;
+        // left: 50%;
+        left: 48%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 100%;
+        max-width: 287px;
+      }
+    }
+  }
+}
