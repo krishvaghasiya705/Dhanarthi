@@ -20,7 +20,7 @@ export default function Header() {
             <Link href={"/"}>Contact</Link>
             <Link href={"/"}>News</Link>
           </div>
-          <CommonButton />
+          <CommonButton Linkpath="/" Text="Get Started" Buttonclass="commonbuttondark"/>
         </div>
       </div>
     </header>

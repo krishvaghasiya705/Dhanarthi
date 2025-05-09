@@ -1,9 +1,10 @@
-@import "@/styles/mixin.scss";
+@use "@/styles/mixin" as *;
 
 .header {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 99;
     padding: 30px 0 20px 0;
 
     .headerflx {
@@ -22,17 +23,16 @@
 
             a {
                 @include font20;
-                color: var(--black2);
-                opacity: .6;
+                color: var(--black3muted);
                 transition: .4s ease-in-out;
 
                 &:hover {
-                    opacity: 1;
+                    color: var(--black2);
                 }
             }
 
             .active {
-                opacity: 1;
+                color: var(--black2);
             }
         }
     }

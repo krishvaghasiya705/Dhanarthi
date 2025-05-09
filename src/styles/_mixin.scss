@@ -1,5 +1,41 @@
+@mixin font18 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
 @mixin font20 {
-    font-weight: 500;
     font-size: 20px;
+    font-weight: 500;
     line-height: 26px;
+}
+
+@mixin font24 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+@mixin font36 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+@mixin font48 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+@mixin font60 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+@mixin font160 {
+    font-size: 160px;
+    font-weight: 500;
+    line-height: 208px;
 }

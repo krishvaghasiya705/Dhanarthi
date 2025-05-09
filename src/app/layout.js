@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
           rel="stylesheet"
         ></link>
+        <title>India's First AI-Driven Financial Insight Platform</title>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />

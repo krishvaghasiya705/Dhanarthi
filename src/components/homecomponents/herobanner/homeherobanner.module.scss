@@ -1,0 +1,191 @@
+@use "@/styles/mixin" as *;
+
+.herobannermain {
+  padding: 0 0 40px 0;
+
+  .herobanner {
+    padding: 80px 0 0 0;
+    overflow: hidden;
+    border-radius: 34px;
+    position: relative;
+    background: var(--themegradientblue2);
+
+    &::after {
+      background-image: url("../../../assets/image/bgnet.png");
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      z-index: 2;
+    }
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      content: "";
+      background: var(--themegradientblue3);
+      z-index: 1;
+    }
+
+    .herobannercontainer {
+      max-width: 1332px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .herobannercontent {
+      position: relative;
+      z-index: 3;
+      max-width: 817px;
+      margin: 0 auto 70px auto;
+      h1 {
+        @include font60;
+        color: var(--white);
+        margin-bottom: 14px;
+        text-align: center;
+      }
+
+      p {
+        @include font18;
+        color: var(--white);
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .buttonalignment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+
+    .herobannercardsection {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: flex-end;
+      gap: 35px;
+
+      .herobannerchartboxmain {
+        width: 100%;
+        max-width: 362px;
+        background-color: var(--lightblue);
+        border: 1px solid var(--border1);
+        border-radius: 28px;
+        padding: 8px;
+        margin-bottom: 30px;
+
+        .herobannerchartbox {
+          border: 1px solid var(--border1);
+          border-radius: 24px;
+          padding: 12px 13px 13px;
+        }
+      }
+
+      .herobannerchartdetailsboxmain {
+        width: 100%;
+        max-width: 430px;
+        background-color: var(--lightblue);
+        border: 1px solid var(--border1);
+        border-radius: 28px 28px 0 0;
+        padding: 9px 9px 0 9px;
+        // margin-bottom: -85px;
+
+        .herobannerchartdetailsbox {
+          border: 1px solid var(--border1);
+          border-bottom: none;
+          border-radius: 24px 24px 0 0;
+          padding: 15px 12px 0 12px;
+        }
+      }
+
+      .herobannerchartgridmain {
+        width: 100%;
+        max-width: 430px;
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        .herobannerchartgridboxmain {
+          background-color: var(--lightblue);
+          border: 1px solid var(--border1);
+          border-radius: 14px;
+          padding: 5px;
+          .herobannerchartgridbox {
+            border: 1px solid var(--border1);
+            border-radius: 10px;
+            height: 100%;
+            padding: 19px 10px 18px 10px;
+            text-align: center;
+            span {
+              display: block;
+              @include font36;
+              color: var(--border3);
+            }
+
+            p {
+              @include font20;
+              opacity: 0.6;
+              color: var(--black3muted);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .herobannermarquee {
+    margin: 40px 0 0 0;
+    .sharesmarquee {
+      padding: 5px 29px;
+      // border-left: 1px solid var(--border3);
+      // border-right: 1px solid var(--border3);
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: var(--border3);
+      }
+
+      &::before {
+        left: 5px;
+      }
+
+      &::after {
+        left: 0;
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        @include font24;
+        color: var(--border3);
+
+        span {
+          @include font20;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: var(--black2);
+        }
+
+        .sharespercentage {
+          color: var(--green);
+        }
+      }
+    }
+  }
+}
