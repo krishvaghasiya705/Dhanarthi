@@ -1,0 +1,16 @@
+@import "@/styles/mixin.scss";
+
+.commonbutton {
+    background: var(--themegradientblue);
+    border-radius: 30px;
+    padding: 14px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+
+    span {
+        color: var(--lightwhite);
+        @include font20;
+    }
+}
