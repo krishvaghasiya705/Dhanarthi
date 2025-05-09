@@ -1,0 +1,101 @@
+@use "@/styles/mixin" as *;
+
+.whychoosesectionmain {
+  padding: 130px 0;
+
+  .whychoosesection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      width: calc(100% - 40px);
+      max-width: 596px;
+    }
+
+    &::after {
+      width: 100%;
+      max-width: 696px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: "";
+      border: 2px solid var(--border1);
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      transform: translate(-50%, -50%);
+    }
+
+    .whychooseboxflx {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 70px;
+        width: 100%;
+        max-width: 540px;
+
+        .whychoosebox {
+            background-color: var(--lightblue);
+            border: 1px solid var(--border1);
+            padding: 30px 10px 30px 30px;
+            border-radius: 26px;
+
+            .whychooseicon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 18px;
+                border-radius: 50%;
+                background: var(--themegradientblue);
+                width: 80px;
+
+                svg {
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+
+            h5 {
+                margin-top: 20px;
+                @include font24;
+                color: var(--black2);
+            }
+
+            p {
+                margin-top: 10px;
+                @include font18;
+                color: var(--black2muted);
+            }
+        }
+    }
+
+    .whychoosesectionmidcontnet {
+        position: relative;
+        z-index: 2;
+        max-width: 416px;
+        text-align: center;
+
+        h6 {
+            @include font48;
+            color: var(--black2);
+            margin-bottom: 18px;
+
+            span {
+                color: var(--border3);
+            }
+        }
+
+        p {
+            @include font18;
+            color: var(--black2muted);
+        }
+    }
+  }
+}
