@@ -4,8 +4,12 @@
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 999;
     padding: 30px 0 20px 0;
+    
+    @media (max-width:768px) {
+        padding: 20px 0;
+    }
 
     .headerflx {
         display: flex;
@@ -16,10 +20,22 @@
         padding: 13px 20px;
         border-radius: 16px;
 
+        .headerlogo {
+            a {
+                @media (max-width:768px) {
+                    display: block !important;
+                }
+            }
+        }
+
         .headerlinks {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 30px;
+
+            @media (max-width:768px) {
+                display: none;
+            }
 
             a {
                 @include font20;
@@ -33,6 +49,28 @@
 
             .active {
                 color: var(--black2);
+            }
+        }
+
+        a {
+            @media (max-width:768px) {
+                display: none;
+            }
+        }
+
+        .headermenuicon {
+            display: none;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            
+            @media (max-width:768px) {
+                display: block;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
             }
         }
     }

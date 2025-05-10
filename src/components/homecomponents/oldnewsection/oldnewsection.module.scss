@@ -56,7 +56,6 @@
       position: relative;
 
       .oldnewsectioncontent {
-        width: 100%;
         max-width: 620px;
         h4 {
           @include font24;
@@ -102,7 +101,6 @@
         left: 48%;
         transform: translateX(-50%);
         height: 100%;
-        width: 100%;
         max-width: 287px;
       }
     }

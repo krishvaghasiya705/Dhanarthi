@@ -26,6 +26,10 @@
       justify-content: space-between;
       gap: 40px;
 
+      @media (max-width:1024px) {
+        flex-direction: column;
+      }
+
       .ltsnewssectionright {
         display: flex;
         flex-direction: column;
@@ -35,7 +39,6 @@
 
       .ltsnewssectionleft,
       .ltsnewssectionright {
-        width: 100%;
         max-width: 780px;
 
         .ltsnewstitlediv {
@@ -59,7 +62,6 @@
       }
 
       .ltscardmain {
-        width: 100%;
         max-width: 780px;
         background-color: var(--white);
         border: 1px solid var(--border1);

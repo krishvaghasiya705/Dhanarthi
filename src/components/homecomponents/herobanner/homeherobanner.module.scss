@@ -8,7 +8,8 @@
     overflow: hidden;
     border-radius: 34px;
     position: relative;
-    background: var(--themegradientblue2);
+    background-image: url("../../../assets/image/gradbg.png");
+    background-size: cover;
 
     &::after {
       background-image: url("../../../assets/image/bgnet.png");
@@ -20,16 +21,6 @@
       height: 100%;
       content: "";
       z-index: 2;
-    }
-    &::before {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 200%;
-      content: "";
-      background: var(--themegradientblue3);
-      z-index: 1;
     }
 
     .herobannercontainer {
@@ -73,7 +64,6 @@
       gap: 35px;
 
       .herobannerchartboxmain {
-        width: 100%;
         max-width: 362px;
         background-color: var(--lightblue);
         border: 1px solid var(--border1);
@@ -89,7 +79,6 @@
       }
 
       .herobannerchartdetailsboxmain {
-        width: 100%;
         max-width: 430px;
         background-color: var(--lightblue);
         border: 1px solid var(--border1);
@@ -106,7 +95,6 @@
       }
 
       .herobannerchartgridmain {
-        width: 100%;
         max-width: 430px;
         margin-bottom: 30px;
         display: grid;

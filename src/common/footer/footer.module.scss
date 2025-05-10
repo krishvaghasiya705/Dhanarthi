@@ -22,10 +22,13 @@
     align-items: center;
     gap: 25px;
 
+    @media (max-width:1024px) {
+      flex-wrap: wrap;
+    }
+
     a {
       display: block;
       max-width: 300px;
-      width: 100%;
 
       .socialbutton {
         background-color: var(--gray2);
@@ -84,7 +87,7 @@
   }
 
   .footer {
-    padding: 72px 0;
+    padding: 72px 0 20px 0;
     position: relative;
     z-index: 2;
 
@@ -95,7 +98,6 @@
       padding-bottom: 30px;
 
       .footerleftcontentmain {
-        width: 100%;
         max-width: 400px;
         display: flex;
         flex-direction: column;
@@ -116,7 +118,7 @@
           flex-direction: column;
           gap: 20px;
           p {
-            @include font20;
+            @include font18;
             color: var(--white);
           }
         }
@@ -129,7 +131,6 @@
       }
 
       .footerlinksmain {
-        width: 100%;
         max-width: 135px;
 
         span {
@@ -155,7 +156,6 @@
 
       .footerrightcontentmain {
         max-width: 450px;
-        width: 100%;
 
         h1 {
             @include font28;
