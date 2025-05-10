@@ -1,0 +1,214 @@
+@use "@/styles/mixin" as *;
+
+.ourcommunitiesmain {
+  padding-bottom: 100px;
+
+  .ourcommunitiestitle {
+    margin-bottom: 50px;
+    h3 {
+      @include font48;
+      color: var(--black2);
+      text-align: center;
+
+      span {
+        color: var(--border3);
+      }
+    }
+  }
+
+  .socialmediabuttonsflxmain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    a {
+      display: block;
+      max-width: 300px;
+      width: 100%;
+
+      .socialbutton {
+        background-color: var(--gray2);
+        border: 1px solid var(--border9);
+        border-radius: 50px;
+        padding: 24px 32px;
+        overflow: hidden;
+        width: 100%;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .socialmediaicon {
+          width: 36px;
+          height: 36px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .socialmedianame {
+          @include font22;
+          color: var(--black3);
+        }
+
+        .socialmedianamebig {
+          opacity: 0.1;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @include font50;
+          color: var(--black4muted);
+        }
+      }
+    }
+  }
+}
+
+.footermain {
+  background-color: var(--black2);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/image/map.png");
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .footer {
+    padding: 72px 0;
+    position: relative;
+    z-index: 2;
+
+    .footerflxmain {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 30px;
+
+      .footerleftcontentmain {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+
+        .footerlogo {
+          svg {
+            width: 233px;
+            height: auto;
+            path {
+              fill: var(--white);
+            }
+          }
+        }
+
+        .footerleftcontent {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          p {
+            @include font20;
+            color: var(--white);
+          }
+        }
+
+        .googleplaybutton {
+          width: 100%;
+          max-width: 168px;
+          cursor: pointer;
+        }
+      }
+
+      .footerlinksmain {
+        width: 100%;
+        max-width: 135px;
+
+        span {
+          @include font18;
+          font-weight: 500;
+          color: var(--gray3);
+          margin-bottom: 30px;
+          display: block;
+        }
+
+        .footerlinkflx {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+
+          a {
+            @include font18;
+            font-weight: 500;
+            color: var(--lightwhite);
+          }
+        }
+      }
+
+      .footerrightcontentmain {
+        max-width: 450px;
+        width: 100%;
+
+        h1 {
+            @include font28;
+            color: var(--lightwhite);
+            margin-bottom: 20px;
+        }
+
+        .emailinputmain {
+            padding: 15px 26px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: var(--transparent);
+            border: 1px solid var(--border11);
+            border-radius: 50px;
+            margin-bottom: 37px;
+            @include font16;
+            color: var(--white);
+            transition: .4s ease-in-out;
+
+            &:focus {
+                outline: none;
+                border-color: var(--white);
+            }
+        }
+      }
+    }
+
+    .footercopyrightmain {
+      border-top: 1px solid var(--border10);
+      padding-top: 25px;
+
+      .footercopyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+
+        p {
+          @include font18;
+          color: var(--lightwhite);
+        }
+
+        .footertermslink {
+          display: flex;
+          align-items: center;
+          gap: 43px;
+
+          a {
+            @include font18;
+            color: var(--lightwhite);
+          }
+        }
+      }
+    }
+  }
+}

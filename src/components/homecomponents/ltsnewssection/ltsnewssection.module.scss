@@ -1,0 +1,149 @@
+@use "@/styles/mixin" as *;
+
+.ltsnewssectionmain {
+  padding: 100px 0 210px 0;
+  position: relative;
+  background-color: var(--lightblue);
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 179px;
+    content: "";
+    background-image: url("../../../assets/image/bgnetsckew.png");
+    z-index: 1;
+  }
+
+  .ltsnewssection {
+    position: relative;
+    z-index: 2;
+
+    .ltsnewssectionflx {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+
+      .ltsnewssectionright {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: space-between;
+      }
+
+      .ltsnewssectionleft,
+      .ltsnewssectionright {
+        width: 100%;
+        max-width: 780px;
+
+        .ltsnewstitlediv {
+          margin-bottom: 28px;
+          h2 {
+            @include font48;
+            color: var(--black2);
+            margin-bottom: 18px;
+
+            span {
+              color: var(--border3);
+            }
+          }
+
+          p {
+            @include font18;
+            color: var(--black2muted);
+            margin-bottom: 24px;
+          }
+        }
+      }
+
+      .ltscardmain {
+        width: 100%;
+        max-width: 780px;
+        background-color: var(--white);
+        border: 1px solid var(--border1);
+        border-radius: 26px;
+        padding: 40px;
+
+        .ltscarddatestitle {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 30px;
+          margin-bottom: 12px;
+
+          .ltscarddates {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            span {
+              @include font18;
+              color: var(--black2muted);
+            }
+          }
+
+          .bookmarkdiv {
+            margin-right: 31px;
+            padding: 1px 2px;
+            cursor: pointer;
+
+            svg {
+              width: 21px;
+              height: 24px;
+            }
+          }
+        }
+
+        .carddetails {
+          h3 {
+            @include font24;
+            color: var(--black2);
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            margin-bottom: 10px;
+          }
+
+          p {
+            @include font18;
+            color: var(--black2muted);
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            margin-bottom: 26px;
+          }
+
+          .newlink {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            @include font20;
+            color: var(--border3);
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+
+            svg {
+              transition: 0.4s ease-in-out;
+              width: 24px;
+              height: 24px;
+
+              path {
+                fill: var(--border3);
+              }
+            }
+
+            &:hover {
+              svg {
+                rotate: 45deg;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

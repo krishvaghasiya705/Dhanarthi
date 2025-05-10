@@ -5,20 +5,20 @@ import step1image from "@/assets/image/step1.png";
 import step2image from "@/assets/image/step2.png";
 
 export default function Analyze() {
-    const Analyzecarddata = [
-        {
-            step: "Step 1",
-            title: "Upload Your Report",
-            paragraph: "Submit your reports or links to generate insights instantly",
-            cardimage: step1image,
-        },
-        {
-            step: "Step 2",
-            title: "Instant Summary",
-            paragraph: "Generate a summary with just one click",
-            cardimage: step2image,
-        }
-    ]
+  const Analyzecarddata = [
+    {
+      step: "Step 1",
+      title: "Upload Your Report",
+      paragraph: "Submit your reports or links to generate insights instantly",
+      cardimage: step1image,
+    },
+    {
+      step: "Step 2",
+      title: "Instant Summary",
+      paragraph: "Generate a summary with just one click",
+      cardimage: step2image,
+    },
+  ];
   return (
     <div className={styles.analyzesectionmain}>
       <div className="container">

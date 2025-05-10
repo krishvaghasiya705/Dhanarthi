@@ -75,3 +75,36 @@
         }
     }
 }
+.commonbuttonlightsc {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 14px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--white);
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    
+    span {
+        transition: all .4s ease-in-out;
+        color: var(--black2);
+        @include font20;
+    }
+    
+    svg {
+    transition: all .4s ease-in-out;
+    width: 24px;
+    height: 24px;
+    path {
+            transition: all .4s ease-in-out;
+            fill: var(--black2);
+        }
+    }
+
+    &:hover {
+        svg {
+            rotate: 45deg;
+        }
+    }
+}

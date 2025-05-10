@@ -1,3 +1,9 @@
+@mixin font16 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
 @mixin font18 {
     font-size: 18px;
     font-weight: 400;
@@ -10,10 +16,22 @@
     line-height: 26px;
 }
 
+@mixin font22 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 29px;
+}
+
 @mixin font24 {
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
+}
+
+@mixin font28 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
 }
 
 @mixin font36 {
@@ -24,6 +42,12 @@
 
 @mixin font48 {
     font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+@mixin font50 {
+    font-size: 50px;
     font-weight: 700;
     line-height: 60px;
 }

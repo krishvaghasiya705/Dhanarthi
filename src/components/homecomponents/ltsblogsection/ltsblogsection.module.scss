@@ -1,0 +1,139 @@
+@use "@/styles/mixin" as *;
+
+.ltsblogsectionmain {
+  padding: 100px 0;
+
+  .ltsblogtitle {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+
+    h4 {
+      @include font48;
+      color: var(--black2);
+
+      span {
+        color: var(--border3);
+      }
+    }
+
+    p {
+      @include font18;
+      color: var(--black2muted);
+    }
+  }
+
+  .ltsblogcardgrd {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+    .ltsblogcardmain {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 100%;
+      justify-content: space-between;
+
+      .blogimage {
+        height: 280px;
+        width: 100%;
+
+        img {
+          border-radius: 20px;
+        }
+      }
+
+      .blogdetails {
+        .blogdateandbutton {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          margin-bottom: 10px;
+
+          .sharemarketbutton {
+            padding: 7px 20px;
+            border: 1px solid var(--border3);
+            background-color: var(--white);
+            cursor: pointer;
+            border-radius: 50px;
+            transition: 0.4s ease-in-out;
+
+            span {
+              transition: 0.4s ease-in-out;
+              @include font18;
+              font-weight: 500;
+              color: var(--border3);
+            }
+
+            &:hover {
+              background-color: var(--border3);
+
+              span {
+                color: var(--white);
+              }
+            }
+          }
+
+          .blogcarddate {
+            @include font18;
+            font-weight: 500;
+            color: var(--black2);
+          }
+        }
+
+        h5 {
+          @include font24;
+          color: var(--black2);
+          margin-bottom: 10px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+        }
+
+        p {
+          @include font18;
+          color: var(--black2muted);
+          margin-bottom: 20px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+        }
+
+        .bloglink {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          @include font20;
+          color: var(--border3);
+          cursor: pointer;
+          transition: 0.4s ease-in-out;
+
+          svg {
+            transition: 0.4s ease-in-out;
+            width: 24px;
+            height: 24px;
+
+            path {
+              fill: var(--border3);
+            }
+          }
+
+          &:hover {
+            svg {
+              rotate: 45deg;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ltsblogviewbutton {
+    margin-top: 54px;
+    display: flex;
+    justify-content: center;
+  }
+}
