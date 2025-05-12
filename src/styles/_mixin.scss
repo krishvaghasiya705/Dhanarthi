@@ -1,3 +1,15 @@
+@mixin font14 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 10px;
+}
+
+@mixin font15 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 27px;
+}
+
 @mixin font16 {
     font-size: 16px;
     font-weight: 500;
