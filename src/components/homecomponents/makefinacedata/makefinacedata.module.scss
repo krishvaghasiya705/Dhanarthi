@@ -26,6 +26,8 @@
     content: "";
     background-image: url("../../../assets/image/bgnetsckew.png");
     z-index: 1;
+    background-position: center center;
+    background-size: cover;
   }
 
   .makefinacedata {
@@ -51,11 +53,11 @@
         }
 
         @media (max-width: 768px) {
-          @include font34;
+          @include font30;
         }
 
         @media (max-width: 576px) {
-          @include font30;
+          @include font28;
         }
       }
 
@@ -122,7 +124,7 @@
         .makefinacedatabodyboxleft {
           align-items: flex-end;
 
-          @media (max-height: 1024px) {
+          @media (max-width: 1024px) {
             align-items: flex-start;
           }
         }
@@ -138,7 +140,7 @@
             border-bottom: none;
           }
 
-          @media (max-width: 1024px) {
+          @media (max-width: 768px) {
             border-bottom: 2px solid var(--border4);
           }
 

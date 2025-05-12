@@ -10,11 +10,19 @@
     border: 1px solid var(--border2);
     cursor: pointer;
     transition: all .4s ease-in-out;
+
+    @media (max-width: 1024px) {
+        padding: 10px 20px;
+    }
     
     span {
         transition: all .4s ease-in-out;
         color: var(--lightwhite);
         @include font20;
+
+        @media (max-width: 1024px) {
+            @include font18;
+        }
     }
     
     svg {

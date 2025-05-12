@@ -3,6 +3,18 @@
 .ourcommunitiesmain {
   padding-bottom: 100px;
 
+  @media (max-width: 1024px) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: 576px) {
+    padding-bottom: 60px;
+  }
+
   .ourcommunitiestitle {
     margin-bottom: 50px;
     h3 {
@@ -12,6 +24,18 @@
 
       span {
         color: var(--border3);
+      }
+
+      @media (max-width: 1024px) {
+        @include font40;
+      }
+
+      @media (max-width: 768px) {
+        @include font34;
+      }
+
+      @media (max-width: 576px) {
+        @include font30;
       }
     }
   }

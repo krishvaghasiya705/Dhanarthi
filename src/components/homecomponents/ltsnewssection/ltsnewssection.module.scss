@@ -9,6 +9,14 @@
     padding: 100px 0;
   }
 
+  @media (max-width: 768px) {
+    padding: 70px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 60px 0;
+  }
+
   &::before {
     position: absolute;
     bottom: 0;
@@ -47,6 +55,7 @@
       .ltsnewssectionleft,
       .ltsnewssectionright {
         max-width: 780px;
+        width: 100%;
 
         @media (max-width: 1024px) {
           max-width: 100%;
@@ -68,11 +77,11 @@
             }
 
             @media (max-width: 768px) {
-              @include font34;
+              @include font30;
             }
 
             @media (max-width: 576px) {
-              @include font30;
+              @include font28;
             }
           }
 
@@ -80,18 +89,23 @@
             @include font18;
             color: var(--black2muted);
             margin-bottom: 24px;
-          
-            @include font16;
+
+            @media (max-width: 576px) {
+              @include font16;
+            }
           }
         }
       }
 
       .ltscardmain {
-        max-width: 780px;
         background-color: var(--white);
         border: 1px solid var(--border1);
         border-radius: 26px;
         padding: 40px;
+
+        @media (max-width: 1440px) {
+          padding: 20px;
+        }
 
         @media (max-width: 1024px) {
           max-width: 100%;
@@ -107,11 +121,16 @@
           .ltscarddates {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 15px;
 
             span {
               @include font18;
               color: var(--black2muted);
+            }
+
+            @media (max-width:576px) {
+              flex-wrap: wrap;
+              gap: 15px;
             }
           }
 
@@ -123,6 +142,10 @@
             svg {
               width: 21px;
               height: 24px;
+            }
+
+            @media (max-width:1440px) {
+              margin-right: 0;
             }
           }
         }
@@ -137,13 +160,13 @@
             overflow: hidden;
             margin-bottom: 10px;
 
-            @media (max-width:768px) {
-                @include font22;
-              }
+            @media (max-width: 768px) {
+              @include font22;
+            }
 
-              @media (max-width:576px) {
-                @include font20;
-              }
+            @media (max-width: 576px) {
+              @include font20;
+            }
           }
 
           p {
@@ -154,6 +177,10 @@
             -webkit-line-clamp: 3;
             overflow: hidden;
             margin-bottom: 26px;
+
+            @media (max-width: 576px) {
+              @include font16;
+            }
           }
 
           .newlink {
@@ -173,6 +200,10 @@
               path {
                 fill: var(--border3);
               }
+            }
+
+            @media (max-width: 768px) {
+              @include font18;
             }
 
             &:hover {

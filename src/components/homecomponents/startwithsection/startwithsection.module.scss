@@ -3,6 +3,18 @@
 .startwithsectionmain {
   padding-bottom: 100px;
 
+  @media (max-width: 1024px) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: 576px) {
+    padding-bottom: 60px;
+  }
+
   .startwithsection {
     padding: 33px 30px;
     overflow: hidden;
@@ -54,11 +66,11 @@
           }
 
           @media (max-width: 768px) {
-            @include font34;
+            @include font30;
           }
 
           @media (max-width: 576px) {
-            @include font30;
+            @include font28;
           }
         }
 
