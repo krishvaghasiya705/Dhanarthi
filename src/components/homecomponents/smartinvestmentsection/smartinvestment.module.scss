@@ -1,7 +1,7 @@
 @use "@/styles/mixin" as *;
 
 .smartinvestmentmain {
-  padding: 100px 0;
+  padding: 100px 20px;
 
   @media (max-width: 1024px) {
     padding: 80px 0;

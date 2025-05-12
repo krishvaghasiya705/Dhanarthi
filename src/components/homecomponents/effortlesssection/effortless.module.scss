@@ -28,7 +28,7 @@
     }
 
     @media (max-width: 1024px) {
-      padding: 80px 20px;
+      padding: 80px 30px;
     }
 
     @media (max-width: 768px) {
@@ -182,18 +182,18 @@
           }
 
           .effortlesssectbox {
-            padding: 34px 40px 30px 70px;
+            padding: 34px 40px 34px 70px;
             position: relative;
             border-radius: 30px;
             background-color: var(--white);
             overflow: hidden;
 
             @media (max-width: 1024px) {
-              padding: 30px 30px 20px 50px;
+              padding: 30px 30px 30px 50px;
             }
 
             @media (max-width: 576px) {
-              padding: 40px 20px 20px 20px;
+              padding: 40px 20px;
             }
 
             h2 {

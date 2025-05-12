@@ -66,8 +66,12 @@
 
     .ltsblogcardmain {
       height: 100%;
+      display: grid;
+      grid-template-rows: 280px 1fr;
+      gap: 20px;
 
       .blogimage {
+        max-height: 280px;
         height: 280px;
         width: 100%;
 
@@ -77,7 +81,11 @@
       }
 
       .blogdetails {
-        margin: 20px 0 0 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         .blogdateandbutton {
           display: flex;
           align-items: center;
