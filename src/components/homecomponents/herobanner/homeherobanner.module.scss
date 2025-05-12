@@ -237,10 +237,13 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+        max-width: 430px;
+        width: 100%;
 
         @media (max-width: 1024px) {
           margin-bottom: 0;
           grid-template-columns: repeat(4, 1fr);
+          max-width: 100%;
         }
 
         @media (max-width: 768px) {
