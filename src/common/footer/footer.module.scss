@@ -16,19 +16,22 @@
     }
   }
 
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
   .socialmediabuttonsflxmain {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 25px;
-
-    @media (max-width:1024px) {
-      flex-wrap: wrap;
-    }
+    overflow-x: auto;
 
     a {
       display: block;
-      max-width: 300px;
+      width: 100%;
+      min-width: 300px;
 
       .socialbutton {
         background-color: var(--gray2);
@@ -97,11 +100,24 @@
       gap: 30px;
       padding-bottom: 30px;
 
+      @media (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+      }
+
       .footerleftcontentmain {
         max-width: 400px;
         display: flex;
         flex-direction: column;
         gap: 27px;
+
+        @media (max-width: 1024px) {
+          max-width: 350px;
+        }
 
         .footerlogo {
           svg {
@@ -157,28 +173,32 @@
       .footerrightcontentmain {
         max-width: 450px;
 
+        @media (max-width: 1024px) {
+          max-width: 350px;
+        }
+
         h1 {
-            @include font28;
-            color: var(--lightwhite);
-            margin-bottom: 20px;
+          @include font28;
+          color: var(--lightwhite);
+          margin-bottom: 20px;
         }
 
         .emailinputmain {
-            padding: 15px 26px;
-            width: 100%;
-            box-sizing: border-box;
-            background-color: var(--transparent);
-            border: 1px solid var(--border11);
-            border-radius: 50px;
-            margin-bottom: 37px;
-            @include font16;
-            color: var(--white);
-            transition: .4s ease-in-out;
+          padding: 15px 26px;
+          width: 100%;
+          box-sizing: border-box;
+          background-color: var(--transparent);
+          border: 1px solid var(--border11);
+          border-radius: 50px;
+          margin-bottom: 37px;
+          @include font16;
+          color: var(--white);
+          transition: 0.4s ease-in-out;
 
-            &:focus {
-                outline: none;
-                border-color: var(--white);
-            }
+          &:focus {
+            outline: none;
+            border-color: var(--white);
+          }
         }
       }
     }

@@ -10,6 +10,16 @@ export default function Whychoosesection() {
     <div className={styles.whychoosesectionmain}>
       <div className="container">
         <div className={styles.whychoosesection}>
+          <div className={styles.whychoosesectionmidcontnetmobile}>
+            <h6>
+              Why Choose <span>Lorem Ipsum</span>
+            </h6>
+            <p>
+              Dhanarthi empowers investors with AI-driven financial insights,
+              simplifying complex reports into actionable, natural language
+              summaries—saving hours and driving smarter decisions.
+            </p>
+          </div>
           <div className={styles.whychooseboxflx}>
             <div className={styles.whychoosebox}>
               <div className={styles.whychooseicon}>

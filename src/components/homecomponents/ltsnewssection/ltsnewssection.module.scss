@@ -5,6 +5,10 @@
   position: relative;
   background-color: var(--lightblue);
 
+  @media (max-width: 1024px) {
+    padding: 100px 0;
+  }
+
   &::before {
     position: absolute;
     bottom: 0;
@@ -14,6 +18,8 @@
     content: "";
     background-image: url("../../../assets/image/bgnetsckew.png");
     z-index: 1;
+    background-size: cover;
+    background-position: center center;
   }
 
   .ltsnewssection {
@@ -26,8 +32,9 @@
       justify-content: space-between;
       gap: 40px;
 
-      @media (max-width:1024px) {
+      @media (max-width: 1024px) {
         flex-direction: column;
+        align-items: flex-start;
       }
 
       .ltsnewssectionright {
@@ -41,6 +48,10 @@
       .ltsnewssectionright {
         max-width: 780px;
 
+        @media (max-width: 1024px) {
+          max-width: 100%;
+        }
+
         .ltsnewstitlediv {
           margin-bottom: 28px;
           h2 {
@@ -51,12 +62,26 @@
             span {
               color: var(--border3);
             }
+
+            @media (max-width: 1024px) {
+              @include font40;
+            }
+
+            @media (max-width: 768px) {
+              @include font34;
+            }
+
+            @media (max-width: 576px) {
+              @include font30;
+            }
           }
 
           p {
             @include font18;
             color: var(--black2muted);
             margin-bottom: 24px;
+          
+            @include font16;
           }
         }
       }
@@ -67,6 +92,10 @@
         border: 1px solid var(--border1);
         border-radius: 26px;
         padding: 40px;
+
+        @media (max-width: 1024px) {
+          max-width: 100%;
+        }
 
         .ltscarddatestitle {
           display: flex;
@@ -107,6 +136,14 @@
             -webkit-line-clamp: 2;
             overflow: hidden;
             margin-bottom: 10px;
+
+            @media (max-width:768px) {
+                @include font22;
+              }
+
+              @media (max-width:576px) {
+                @include font20;
+              }
           }
 
           p {

@@ -11,6 +11,10 @@
     background-image: url("../../../assets/image/gradbg.png");
     background-size: cover;
 
+    @media (max-width: 1024px) {
+      padding: 80px 20px;
+    }
+
     &::after {
       background-image: url("../../../assets/image/bgnet.png");
       background-size: cover;
@@ -31,19 +35,43 @@
       align-items: center;
       gap: 30px;
 
+      @media (max-width: 1024px) {
+        flex-direction: column;
+      }
+
       .analyzesectionleft {
         width: 100%;
         max-width: 500px;
+
+        @media (max-width: 1024px) {
+          max-width: 100%;
+        }
 
         h1 {
           @include font48;
           color: var(--white);
           margin-bottom: 18px;
+
+          @media (max-width: 1024px) {
+            @include font40;
+          }
+
+          @media (max-width: 768px) {
+            @include font34;
+          }
+
+          @media (max-width: 576px) {
+            @include font30;
+          }
         }
 
         p {
           @include font18;
           color: var(--white);
+
+          @media (max-width:576px) {
+            @include font16;
+          }
         }
       }
 
@@ -53,6 +81,14 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
+
+        @media (max-width: 1024px) {
+          max-width: 100%;
+        }
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
 
         .analyzesectionrightcardmain {
           width: 100%;
@@ -98,6 +134,13 @@
               @include font24;
               color: var(--black2);
               margin-top: 18px;
+              @media (max-width:768px) {
+                @include font22;
+              }
+
+              @media (max-width:576px) {
+                @include font20;
+              }
             }
 
             p {

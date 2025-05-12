@@ -3,12 +3,31 @@
 .smartinvestmentmain {
   padding: 100px 0;
 
+  @media (max-width: 1024px) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 70px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 60px 0;
+  }
+
   .smartinvestmenttitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
     margin-bottom: 50px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
 
     h5 {
       @include font48;
@@ -18,12 +37,33 @@
       span {
         color: var(--border3);
       }
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+        @include font40;
+      }
+
+      @media (max-width: 768px) {
+        @include font34;
+      }
+
+      @media (max-width: 576px) {
+        @include font30;
+      }
     }
 
     p {
       @include font18;
       color: var(--black2muted);
       max-width: 600px;
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+      }
+
+      @media (max-width: 576px) {
+        @include font16;
+      }
     }
   }
 
@@ -32,11 +72,19 @@
     gap: 30px;
     justify-content: space-between;
 
+    @media (max-width: 1024px) {
+      flex-direction: column-reverse;
+    }
+
     .smartinvestmentflxleft {
       max-width: 640px;
       display: flex;
       flex-direction: column;
       gap: 20px;
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+      }
 
       .smartinvestmentbox {
         padding: 22px 20px;
@@ -50,6 +98,14 @@
           color: var(--black2);
           margin-bottom: 10px;
           line-height: 31px;
+
+          @media (max-width: 768px) {
+            @include font22;
+          }
+
+          @media (max-width: 576px) {
+            @include font20;
+          }
         }
 
         span {
@@ -72,6 +128,10 @@
     .smartinvestmentflxright {
       max-width: 840px;
       height: 550px;
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+      }
 
       img {
         border-radius: 20px;

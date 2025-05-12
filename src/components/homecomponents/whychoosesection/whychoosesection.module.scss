@@ -8,6 +8,11 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    gap: 30px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
 
     &::before {
       width: calc(100% - 40px);
@@ -32,70 +37,134 @@
     }
 
     .whychooseboxflx {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 70px;
-        width: 100%;
-        max-width: 540px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 70px;
+      width: 100%;
+      max-width: 540px;
 
-        .whychoosebox {
-            background-color: var(--lightblue);
-            border: 1px solid var(--border1);
-            padding: 30px 10px 30px 30px;
-            border-radius: 26px;
+      @media (max-width: 1024px) {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
 
-            .whychooseicon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 18px;
-                border-radius: 50%;
-                background: var(--themegradientblue);
-                width: 80px;
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
 
-                svg {
-                    width: 44px;
-                    height: 44px;
-                }
-            }
+      .whychoosebox {
+        background-color: var(--lightblue);
+        border: 1px solid var(--border1);
+        padding: 30px 10px 30px 30px;
+        border-radius: 26px;
 
-            h5 {
-                margin-top: 20px;
-                @include font24;
-                color: var(--black2);
-            }
+        .whychooseicon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 18px;
+          border-radius: 50%;
+          background: var(--themegradientblue);
+          width: 80px;
 
-            p {
-                margin-top: 10px;
-                @include font18;
-                color: var(--black2muted);
-            }
+          svg {
+            width: 44px;
+            height: 44px;
+          }
         }
-    }
 
-    .whychoosesectionmidcontnet {
-        position: relative;
-        z-index: 2;
-        max-width: 416px;
-        text-align: center;
+        h5 {
+          margin-top: 20px;
+          @include font24;
+          color: var(--black2);
 
-        h6 {
-            @include font48;
-            color: var(--black2);
-            margin-bottom: 18px;
+          @media (max-width: 768px) {
+            @include font22;
+          }
 
-            span {
-                color: var(--border3);
-            }
+          @media (max-width: 576px) {
+            @include font20;
+          }
         }
 
         p {
-            @include font18;
-            color: var(--black2muted);
+          margin-top: 10px;
+          @include font18;
+          color: var(--black2muted);
         }
+      }
+    }
+
+    .whychoosesectionmidcontnet {
+      position: relative;
+      z-index: 2;
+      max-width: 416px;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      h6 {
+        @include font48;
+        color: var(--black2);
+        margin-bottom: 18px;
+
+        span {
+          color: var(--border3);
+        }
+
+        @media (max-width: 1024px) {
+          @include font40;
+        }
+
+        @media (max-width: 768px) {
+          @include font34;
+        }
+
+        @media (max-width: 576px) {
+          @include font30;
+        }
+      }
+
+      p {
+        @include font18;
+        color: var(--black2muted);
+
+        @media (max-width: 576px) {
+          @include font16;
+        }
+      }
+    }
+
+    .whychoosesectionmidcontnetmobile {
+      display: none;
+      position: relative;
+      z-index: 2;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+
+      h6 {
+        @include font48;
+        color: var(--black2);
+        margin-bottom: 18px;
+
+        span {
+          color: var(--border3);
+        }
+      }
+
+      p {
+        @include font18;
+        color: var(--black2muted);
+      }
     }
   }
 }

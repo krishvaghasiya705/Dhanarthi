@@ -3,6 +3,8 @@ import styles from "./oldnewsection.module.scss";
 import Listarrowicon from "@/assets/icon/listarrowicon";
 import vsimage from "@/assets/image/vsimage.png";
 import Image from "next/image";
+import Versuslineimage from "@/assets/image/versusline.png"
+import Versusimage from "@/assets/image/versusname.png"
 
 export default function Oldnewsection() {
   const Oldwaydata = [
@@ -92,8 +94,13 @@ export default function Oldnewsection() {
                 ))}
               </div>
             </div>
-            <div className={styles.vsimage}>
-              <Image src={vsimage} alt="vsimage" width={1000} height={1000} />
+            <div className={styles.vsimagemain}>
+              <div className={styles.vsimagemain}>
+                <Image src={Versuslineimage} alt="Versuslineimage" width={1000} height={1000} className={styles.vsimage} />
+                  <div className={styles.vsnameimage}>
+                    <Image src={Versusimage} alt="Versusimage" width={1000} height={1000} />
+                  </div>
+              </div>
             </div>
             <div className={styles.oldnewsectioncontent}>
               <h4>New Ways with Loremipsum</h4>

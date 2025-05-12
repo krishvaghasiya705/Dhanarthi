@@ -11,6 +11,10 @@
     background-image: url("../../../assets/image/gradbg.png");
     background-size: cover;
 
+    @media (max-width: 1024px) {
+      padding: 60px 0;
+    }
+
     &::after {
       background-image: url("../../../assets/image/bgnet.png");
       background-size: cover;
@@ -34,11 +38,31 @@
       z-index: 3;
       max-width: 817px;
       margin: 0 auto 70px auto;
+      
+      @media (max-width:768px) {
+        margin-bottom: 50px;
+      }
       h1 {
         @include font60;
         color: var(--white);
         margin-bottom: 14px;
         text-align: center;
+
+        @media (max-width: 1440px) {
+          @include font50;
+        }
+
+        @media (max-width: 1024px) {
+          @include font40;
+        }
+
+        @media (max-width: 768px) {
+          @include font34;
+        }
+
+        @media (max-width: 576px) {
+          @include font30;
+        }
       }
 
       p {
@@ -46,6 +70,11 @@
         color: var(--white);
         margin-bottom: 40px;
         text-align: center;
+
+        @media (max-width: 576px) {
+          @include font16;
+          margin-bottom: 30px;
+        }
       }
 
       .buttonalignment {
@@ -53,6 +82,19 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
+
+        @media (max-width: 1024px) {
+          gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: 576px) {
+          gap: 15px;
+        }
       }
     }
 
@@ -61,7 +103,12 @@
       z-index: 3;
       display: flex;
       align-items: flex-end;
+      justify-content: center;
       gap: 35px;
+
+      @media (max-width: 1024px) {
+        flex-wrap: wrap;
+      }
 
       .herobannerchartboxmain {
         max-width: 362px;
@@ -71,10 +118,22 @@
         padding: 8px;
         margin-bottom: 30px;
 
+        @media (max-width: 1440px) {
+          width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+          margin-bottom: 0;
+        }
+
         .herobannerchartbox {
           border: 1px solid var(--border1);
           border-radius: 24px;
           padding: 12px 13px 13px;
+
+          @media (max-width: 1024px) {
+            padding: 10px;
+          }
         }
       }
 
@@ -84,37 +143,64 @@
         border: 1px solid var(--border1);
         border-radius: 28px 28px 0 0;
         padding: 9px 9px 0 9px;
-        // margin-bottom: -85px;
+
+        @media (max-width: 1440px) {
+          width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+          padding: 0px;
+          border-radius: 28px;
+        }
 
         .herobannerchartdetailsbox {
           border: 1px solid var(--border1);
           border-bottom: none;
           border-radius: 24px 24px 0 0;
           padding: 15px 12px 0 12px;
+
+          @media (max-width: 1024px) {
+            padding: 15px 12px;
+            border-radius: 24px;
+          }
         }
       }
 
       .herobannerchartgridmain {
-        max-width: 430px;
         margin-bottom: 30px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 10px;
+
+        @media (max-width: 1024px) {
+          margin-bottom: 0;
+          grid-template-columns: repeat(4,1fr);
+        }
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+
+        @media (max-width: 576px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
 
         .herobannerchartgridboxmain {
           background-color: var(--lightblue);
           border: 1px solid var(--border1);
           border-radius: 14px;
           padding: 5px;
+
           .herobannerchartgridbox {
             border: 1px solid var(--border1);
             border-radius: 10px;
             height: 100%;
             padding: 19px 10px 18px 10px;
             text-align: center;
+
             span {
               display: block;
-              @include font36;
+              @include font30;
               color: var(--border3);
             }
 
@@ -122,6 +208,10 @@
               @include font20;
               opacity: 0.6;
               color: var(--black3muted);
+
+              @media (max-width: 576px) {
+                font-size: 16px;
+              }
             }
           }
         }
@@ -131,10 +221,9 @@
 
   .herobannermarquee {
     margin: 40px 0 0 0;
+
     .sharesmarquee {
       padding: 5px 29px;
-      // border-left: 1px solid var(--border3);
-      // border-right: 1px solid var(--border3);
       position: relative;
 
       &::before,
@@ -161,6 +250,14 @@
         gap: 14px;
         @include font24;
         color: var(--border3);
+
+        @media (max-width:768px) {
+                @include font22;
+              }
+
+              @media (max-width:576px) {
+                @include font20;
+              }
 
         span {
           @include font20;

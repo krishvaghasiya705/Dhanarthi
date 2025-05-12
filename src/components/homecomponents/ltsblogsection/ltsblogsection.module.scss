@@ -15,11 +15,27 @@
       span {
         color: var(--border3);
       }
+
+      @media (max-width: 1024px) {
+        @include font40;
+      }
+
+      @media (max-width: 768px) {
+        @include font34;
+      }
+
+      @media (max-width: 576px) {
+        @include font30;
+      }
     }
 
     p {
       @include font18;
       color: var(--black2muted);
+
+      @media (max-width:576px) {
+        @include font16;
+      }
     }
   }
 
@@ -27,6 +43,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .ltsblogcardmain {
       height: 100%;
@@ -87,6 +111,14 @@
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
           overflow: hidden;
+          
+          @media (max-width:768px) {
+                @include font22;
+              }
+
+              @media (max-width:576px) {
+                @include font20;
+              }
         }
 
         p {

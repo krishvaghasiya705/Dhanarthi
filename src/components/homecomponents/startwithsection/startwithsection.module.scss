@@ -24,35 +24,59 @@
     }
 
     .startwithsectionbox {
-        max-width: 1320px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 3;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 30px;
+      max-width: 1320px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
 
-        .startwithsectiondetails {
-            max-width: 710px;
+      @media (max-width: 1024px) {
+        flex-direction: column;
+      }
 
-            h1 {
-                @include font48;
-                color: var(--white);
-                margin-bottom: 16px;
-            }
+      .startwithsectiondetails {
+        max-width: 710px;
 
-            p {
-                @include font18;
-                color: var(--white);
-                margin-bottom: 46px;
-            }
+        @media (max-width: 1024px) {
+          max-width: 100%;
         }
 
-        .startwithimage {
-            max-width: 345px;
-            height: 377px;
+        h1 {
+          @include font48;
+          color: var(--white);
+          margin-bottom: 16px;
+
+          @media (max-width: 1024px) {
+            @include font40;
+          }
+
+          @media (max-width: 768px) {
+            @include font34;
+          }
+
+          @media (max-width: 576px) {
+            @include font30;
+          }
         }
+
+        p {
+          @include font18;
+          color: var(--white);
+          margin-bottom: 46px;
+
+          @media (max-width: 576px) {
+            @include font16;
+          }
+        }
+      }
+
+      .startwithimage {
+        max-width: 345px;
+        height: 377px;
+      }
     }
   }
 }

@@ -34,10 +34,28 @@
     line-height: 40px;
 }
 
+@mixin font30 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+@mixin font34 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42px;
+}
+
 @mixin font36 {
     font-size: 36px;
     font-weight: 700;
-    line-height: 100%;
+    line-height: 47px;
+}
+
+@mixin font40 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
 }
 
 @mixin font48 {
@@ -56,6 +74,24 @@
     font-size: 60px;
     font-weight: 700;
     line-height: 70px;
+}
+
+@mixin font80 {
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 90px;
+}
+
+@mixin font100 {
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 130px;
+}
+
+@mixin font130 {
+    font-size: 130px;
+    font-weight: 500;
+    line-height: 180px;
 }
 
 @mixin font160 {

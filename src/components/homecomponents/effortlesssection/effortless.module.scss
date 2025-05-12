@@ -3,6 +3,18 @@
 .effortlesssectionmain {
   padding-bottom: 100px;
 
+  @media (max-width:1024px){
+    padding-bottom: 80px;
+  }
+
+  @media (max-width:768px){
+    padding-bottom: 70px;
+  }
+
+  @media (max-width:576px){
+    padding-bottom: 60px;
+  }
+  
   .effortlesssection {
     padding: 100px 100px 65px 100px;
     overflow: hidden;
@@ -10,6 +22,22 @@
     position: relative;
     background-image: url("../../../assets/image/gradbg.png");
     background-size: cover;
+
+    @media (max-width: 1440px) {
+      padding: 100px 20px;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 80px 20px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 70px 20px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 60px 20px;
+    }
 
     &::after {
       background-image: url("../../../assets/image/bgnet.png");
@@ -30,20 +58,55 @@
       justify-content: space-between;
       gap: 30px;
 
+      @media (max-width: 1024px) {
+        flex-direction: column;
+      }
+
       .effortlesssectioncontentleft {
         max-width: 660px;
+        width: 100%;
+
+        @media (max-width: 1024px) {
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
 
         h1 {
           @include font48;
           color: var(--white);
           max-width: 480px;
           margin-bottom: 18px;
+
+          @media (max-width: 1024px) {
+            @include font40;
+            font-size: 40px;
+            max-width: 100%;
+          }
+
+          @media (max-width: 768px) {
+            @include font34;
+          }
+
+          @media (max-width: 576px) {
+            @include font30;
+          }
         }
 
         p {
           @include font18;
           color: var(--white);
           margin-bottom: 36px;
+
+          @media (max-width: 1024px) {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+
+          @media (max-width: 576px) {
+            @include font16;
+          }
         }
 
         img {
@@ -57,6 +120,10 @@
         display: flex;
         flex-direction: column;
         gap: 35px;
+
+        @media (max-width: 1024px) {
+          max-width: 100%;
+        }
 
         .effortlesssectboxmain {
           margin-left: 40px;
@@ -80,31 +147,61 @@
               width: 42px;
               height: 42px;
             }
+
+            @media (max-width: 1024px) {
+              padding: 15px;
+              left: -34px;
+
+              svg {
+                width: 30px;
+                height: 30px;
+              }
+            }
           }
 
           .effortlesssectbox {
-            padding: 34px 40px 8px 70px;
+            padding: 34px 40px 15px 70px;
             position: relative;
             border-radius: 30px;
             background-color: var(--white);
             overflow: hidden;
 
+            @media (max-width:1024px) {
+              padding: 30px 30px 20px 50px;
+            }
+
             h2 {
               @include font24;
               color: var(--black2);
               margin-bottom: 8px;
-            }
 
+              @media (max-width:768px) {
+                @include font22;
+              }
+
+              @media (max-width:576px) {
+                @include font20;
+              }
+            }
+            
             span {
               @include font18;
               color: var(--border3);
               font-weight: 500;
               text-transform: uppercase;
-            }
 
+              @media (max-width:576px) {
+                @include font16;
+              }
+            }
+            
             p {
               @include font18;
               color: var(--black2muted);
+              
+              @media (max-width:576px) {
+                @include font16;
+              }
             }
 
             .effortlesssectboxnumber {
@@ -113,6 +210,18 @@
               right: 22px;
               @include font160;
               color: var(--border7muted);
+
+              @media (max-width:1024px) {
+                @include font130;
+              }
+
+              @media (max-width:768px) {
+                @include font100;
+              }
+
+              @media (max-width:576px) {
+                @include font80;
+              }
             }
           }
         }

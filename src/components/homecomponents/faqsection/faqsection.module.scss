@@ -12,6 +12,18 @@
       span {
         color: var(--border3);
       }
+
+      @media (max-width: 1024px) {
+        @include font40;
+      }
+
+      @media (max-width: 768px) {
+        @include font34;
+      }
+
+      @media (max-width: 576px) {
+        @include font30;
+      }
     }
   }
 
@@ -64,6 +76,14 @@
           gap: 18px;
           @include font24;
           color: var(--black2);
+
+          @media (max-width:768px) {
+                @include font22;
+              }
+
+              @media (max-width:576px) {
+                @include font20;
+              }
         }
 
         .faqplusicon {
