@@ -112,8 +112,11 @@
           gap: 0;
         }
 
-        .makefinacedatabodyboxright {
+        .makefinacedatabodyboxrightmain {
           align-items: flex-start;
+          .makefinacedatabodyboxrightmain {
+            align-items: flex-start;
+          }
 
           h4,
           p {
@@ -121,29 +124,35 @@
           }
         }
 
-        .makefinacedatabodyboxleft {
+        .makefinacedatabodyboxleftmain {
           align-items: flex-end;
-
-          @media (max-width: 1024px) {
-            align-items: flex-start;
+          
+          .makefinacedatabodyboxleft {            
+            align-items: flex-end;
           }
+
+          // @media (max-width: 1024px) {
+          //   align-items: flex-start;
+          // }
         }
 
-        .makefinacedatabodyboxleft,
-        .makefinacedatabodyboxright {
+        .makefinacedatabodyboxleftmain,
+        .makefinacedatabodyboxrightmain {
           border-bottom: 2px solid var(--border4);
           padding: 40px 0;
           display: flex;
           justify-content: space-between;
           flex-direction: column;
 
-          @media (max-width: 1024px) {
-            border-bottom: none;
-          }
-
           @media (max-width: 768px) {
             border-bottom: 2px solid var(--border4);
           }
+
+          .makefinacedatabodyboxleft,.makefinacedatabodyboxright {
+            display: flex;
+            flex-direction: column;
+          }
+
 
           .makefinancebodyicon {
             margin-bottom: 20px;
@@ -176,9 +185,9 @@
             margin-bottom: 10px;
             text-align: right;
 
-            @media (max-width: 1024px) {
-              text-align: left;
-            }
+            // @media (max-width: 1024px) {
+            //   text-align: left;
+            // }
 
             @media (max-width: 768px) {
               @include font22;
@@ -195,9 +204,9 @@
             margin-bottom: 31px;
             text-align: right;
 
-            @media (max-width: 1024px) {
-              text-align: left;
-            }
+            // @media (max-width: 1024px) {
+            //   text-align: left;
+            // }
           }
 
           .explorelink {
@@ -228,9 +237,17 @@
           }
         }
 
-        .makefinacedatabodyboxleft:last-child,
-        .makefinacedatabodyboxright:last-child {
+        .makefinacedatabodyboxleftmain:last-child,
+        .makefinacedatabodyboxrightmain:last-child {
           border-bottom: none;
+          
+          @media (max-width: 1024px) {
+            border-bottom: 2px solid var(--border4);
+          }
+          
+          @media (max-width: 768px) {
+            border-bottom: none;
+          }
         }
       }
     }

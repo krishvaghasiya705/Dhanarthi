@@ -25,8 +25,8 @@ export default function Makefinacedata() {
           </div>
           <div className={styles.makefinacedatabody}>
             <div className={styles.makefinacedatabodycontentmain}>
-              <div className={styles.makefinacedatabodyboxleft}>
-                <div>
+              <div className={styles.makefinacedatabodyboxleftmain}>
+                <div className={styles.makefinacedatabodyboxleft}>
                   <div className={styles.makefinancebodyicon}>
                     <Hoursicon />
                   </div>
@@ -39,8 +39,8 @@ export default function Makefinacedata() {
                   Explore More <Arrow />
                 </span>
               </div>
-              <div className={styles.makefinacedatabodyboxleft}>
-                <div>
+              <div className={styles.makefinacedatabodyboxleftmain}>
+                <div className={styles.makefinacedatabodyboxleft}>
                   <div className={styles.makefinancebodyicon}>
                     <Costicon />
                   </div>
@@ -61,8 +61,8 @@ export default function Makefinacedata() {
               />
             </div>
             <div className={styles.makefinacedatabodycontentmain}>
-              <div className={styles.makefinacedatabodyboxright}>
-                <div>
+              <div className={styles.makefinacedatabodyboxrightmain}>
+                <div className={styles.makefinacedatabodyboxright}>
                   <div className={styles.makefinancebodyicon}>
                     <Percetageicon />
                   </div>
@@ -76,8 +76,8 @@ export default function Makefinacedata() {
                   Explore More <Arrow />
                 </span>
               </div>
-              <div className={styles.makefinacedatabodyboxright}>
-                <div>
+              <div className={styles.makefinacedatabodyboxrightmain}>
+                <div className={styles.makefinacedatabodyboxright}>
                   <div className={styles.makefinancebodyicon}>
                     <Fastericon />
                   </div>
