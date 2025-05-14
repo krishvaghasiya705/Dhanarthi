@@ -26,21 +26,27 @@ export default function Makefinacedata() {
           <div className={styles.makefinacedatabody}>
             <div className={styles.makefinacedatabodycontentmain}>
               <div className={styles.makefinacedatabodyboxleft}>
-                <div className={styles.makefinancebodyicon}>
-                  <Hoursicon />
+                <div>
+                  <div className={styles.makefinancebodyicon}>
+                    <Hoursicon />
+                  </div>
+                  <h4>40h+ Time Saved Monthly</h4>
+                  <p>
+                    On report reading, ratio analysis, and concall decoding.
+                  </p>
                 </div>
-                <h4>40h+ Time Saved Monthly</h4>
-                <p>On report reading, ratio analysis, and concall decoding.</p>
                 <span className={styles.explorelink}>
                   Explore More <Arrow />
                 </span>
               </div>
               <div className={styles.makefinacedatabodyboxleft}>
-                <div className={styles.makefinancebodyicon}>
-                  <Costicon />
+                <div>
+                  <div className={styles.makefinancebodyicon}>
+                    <Costicon />
+                  </div>
+                  <h4>10x Cost Savings</h4>
+                  <p>Compared to hiring analysts or using premium tools.</p>
                 </div>
-                <h4>10x Cost Savings</h4>
-                <p>Compared to hiring analysts or using premium tools.</p>
                 <span className={styles.explorelink}>
                   Explore More <Arrow />
                 </span>
@@ -56,24 +62,28 @@ export default function Makefinacedata() {
             </div>
             <div className={styles.makefinacedatabodycontentmain}>
               <div className={styles.makefinacedatabodyboxright}>
-                <div className={styles.makefinancebodyicon}>
-                  <Percetageicon />
+                <div>
+                  <div className={styles.makefinancebodyicon}>
+                    <Percetageicon />
+                  </div>
+                  <h4>90% Less Time Spent on Research</h4>
+                  <p>
+                    Natural-language insights replace deep-dive financial
+                    analysis.
+                  </p>
                 </div>
-                <h4>90% Less Time Spent on Research</h4>
-                <p>
-                  Natural-language insights replace deep-dive financial
-                  analysis.
-                </p>
                 <span className={styles.explorelink}>
                   Explore More <Arrow />
                 </span>
               </div>
               <div className={styles.makefinacedatabodyboxright}>
-                <div className={styles.makefinancebodyicon}>
-                  <Fastericon />
+                <div>
+                  <div className={styles.makefinancebodyicon}>
+                    <Fastericon />
+                  </div>
+                  <h4>3x Faster Faster Investment Clarity</h4>
+                  <p>Instant red/green flags and summaries help act quicker.</p>
                 </div>
-                <h4>3x Faster Faster Investment Clarity</h4>
-                <p>Instant red/green flags and summaries help act quicker.</p>
                 <span className={styles.explorelink}>
                   Explore More <Arrow />
                 </span>

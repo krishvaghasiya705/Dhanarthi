@@ -23,6 +23,10 @@
     background-image: url("../../../assets/image/gradbg.png");
     background-size: cover;
 
+    @media (max-width:768px) {
+      padding: 30px 20px;
+    }
+
     &::after {
       background-image: url("../../../assets/image/bgnet.png");
       background-size: cover;
@@ -88,6 +92,11 @@
       .startwithimage {
         max-width: 345px;
         height: 377px;
+
+        @media (max-width:576px) {
+          max-width: 100%;
+          height: auto;
+        }
       }
     }
   }

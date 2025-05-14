@@ -109,17 +109,14 @@
         max-width: 840px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        display: flex;
-        overflow-x: auto;
         gap: 20px;
-
+        
         @media (max-width: 1024px) {
           max-width: 100%;
         }
-
+        
         @media (max-width: 768px) {
-          display: flex;
-          overflow-x: auto;
+          grid-template-columns: repeat(1, 1fr);
         }
 
         .analyzesectionrightcardmain {
@@ -129,13 +126,13 @@
           border-radius: 20px;
           padding: 10px;
 
-          @media (max-width:1440px) {
-            min-width: 360px;
-          }
+          // @media (max-width:1440px) {
+          //   min-width: 360px;
+          // }
 
           @media (max-width: 768px) {
-            min-width: 400px;
-            max-width: 400px;
+            // min-width: 400px;
+            max-width: 100%;
           }
 
           .analyzesectionrightcard {

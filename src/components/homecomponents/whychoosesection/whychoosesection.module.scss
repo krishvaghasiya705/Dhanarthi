@@ -209,6 +209,7 @@
 
         @media (max-width: 576px) {
           @include font16;
+          line-height: 23px;
         }
       }
     }
